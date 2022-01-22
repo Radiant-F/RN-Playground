@@ -13,6 +13,11 @@ const Dashboard = ({navigation}) => {
         title="pindah ke chart"
         onPress={() => navigation.navigate('Chart')}
       />
+      <Button
+        title="Flatlist"
+        onPress={() => navigation.navigate('FlatList')}
+      />
+      <Button title="PNM PIN" onPress={() => navigation.navigate('PIN')} />
     </View>
   );
 };

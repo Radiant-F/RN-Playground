@@ -4,8 +4,8 @@ import {Amalan, Profile} from '../../components/screens/YaumiSantri/@export';
 
 function Dashboard() {
   return (
-    <View>
-      <Profile />
+    <View style={{paddingVertical: 10}}>
+      {/* <Profile /> */}
       <Amalan />
     </View>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Dimensions, StyleSheet, Image} from 'react-native';
+import {View, Text, StyleSheet, Image} from 'react-native';
 import {ProgressChart} from 'react-native-chart-kit';
 import {
   cutlery,
@@ -9,7 +9,6 @@ import {
   reading_quran,
   size,
 } from '../../../assets/images/@exports';
-import Gap from '../../../screens/Gap';
 
 function Amalan() {
   const data = [
@@ -17,28 +16,34 @@ function Amalan() {
       title: 'Sholat',
       done: 90,
       total: 220,
+      percentage: 0.4,
     },
     {
       title: `Al-Qur'an`,
-      done: 90,
+      done: 110,
       total: 220,
+      percentage: 0.5,
     },
     {
       title: `Do'a`,
-      done: 90,
+      done: 10,
       total: 220,
+      percentage: 0.2,
     },
     {
       title: 'Puasa',
-      done: 90,
+      done: 145,
       total: 220,
+      percentage: 0.75,
     },
     {
       title: 'Donasi',
-      done: 90,
+      done: 145,
       total: 220,
+      percentage: 0.75,
     },
   ];
+
   function amalanIcon(title) {
     switch (title) {
       case 'Sholat':
@@ -61,11 +66,11 @@ function Amalan() {
         {data.map((value, index) => (
           <View key={index}>
             <Text style={styles.amalan}>{value.title}</Text>
-            <Gap height={5} />
+            <View style={{height: 5}} />
             <View style={styles.content}>
               <View style={styles.chart}>
                 <ProgressChart
-                  data={[0.75]}
+                  data={[value.percentage]}
                   width={75}
                   height={75}
                   hideLegend
@@ -88,7 +93,7 @@ function Amalan() {
                 {value.done} dari {value.total} dikerjakan
               </Text>
             </View>
-            <Gap height={15} />
+            <View style={{height: 15}} />
           </View>
         ))}
       </View>

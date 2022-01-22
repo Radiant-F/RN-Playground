@@ -8,13 +8,32 @@ const Demo = () => {
   const [type, setType] = useState('pemeriksaan fisik');
   const [image, setImage] = useState();
   const [token, setToken] = useState();
+  const [form, setForm] = useState({email: null, password: null});
 
-  // ambil token untuk auntentikasi
-  async function getToken() {
-    const {data} = await axios.post(url.login, login);
-    console.log(data);
-    setToken(data.token);
+  async function loginAxios() {
+    try {
+      const {data} = await axios.post(url.login, form);
+      setToken(data.token);
+    } catch (error) {
+      console.log(error);
+    }
   }
+
+  const loginFetch = () => {
+    fetch(url.login, {
+      method: 'POST',
+      body: JSON.stringify(form),
+      headers: {
+        Accept: 'application/json',
+      },
+    })
+      .then(response => response.json())
+      .then(json => {
+        console.log(json);
+        setToken(json.token);
+      })
+      .catch(error => console.log(error));
+  };
 
   // buka galeri untuk pilih gambar
   async function imagePicker() {

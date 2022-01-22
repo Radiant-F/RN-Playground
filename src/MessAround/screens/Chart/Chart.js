@@ -9,7 +9,7 @@ import {
   reading_quran,
   size,
 } from '../../components/assets/images/@exports';
-import Gap from '../../components/assets/screens/Gap';
+import {Gap} from '../../components/screens/@exports';
 
 function Chart() {
   const data = [
