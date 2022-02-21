@@ -1,5 +1,11 @@
-const host = 'http://restful-api-laravel-7.herokuapp.com/api';
+import axios from 'axios';
 
-export const url = {
-  login: host + '/login',
-};
+const url = 'http://restful-api-laravel-7.herokuapp.com/api/';
+const config = token => ({
+  headers: {
+    Authorization: `Bearer ${token}`,
+  },
+});
+
+export const fetchLogin = formData => axios.post(url + 'login', formData);
+export const fetchTodos = token => axios.get(url + 'todo', config(token));

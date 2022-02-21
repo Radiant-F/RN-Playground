@@ -1,12 +1,15 @@
+import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {View, Text} from 'react-native';
+import {Todos} from '../../components/exports';
 
-const Dashboard = () => {
+export default function Dashboard({navigation, route}) {
+  const {token} = route.params;
   return (
     <View>
-      <Text>a</Text>
+      <Text>Dashboard</Text>
+      <Todos token={token} />
     </View>
   );
-};
+}
 
-export default Dashboard;
+const styles = StyleSheet.create({});

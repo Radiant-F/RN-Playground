@@ -15,7 +15,16 @@
 
 import React from 'react';
 import Navigator from './Thunk/route/Navigator';
+import {Provider} from 'react-redux';
+import {createStore, applyMiddleware, compose} from 'redux';
+import thunk from 'redux-thunk';
+import reducers from './Thunk/redux/reducers';
+const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
 export default function App() {
-  return <Navigator />;
+  return (
+    <Provider store={store}>
+      <Navigator />
+    </Provider>
+  );
 }
