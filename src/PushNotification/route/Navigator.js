@@ -1,13 +1,7 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
-import {
-  CollapsibleHeader,
-  Dashboard,
-  SkeletonLoading,
-  StickyHeader,
-} from './routes';
-import Header from '../components/screen/Header';
+import {Auth, Dashboard} from '../screens/exports';
 
 const Stack = createNativeStackNavigator();
 function Navigator() {
@@ -15,9 +9,7 @@ function Navigator() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen component={Dashboard} name="Dashboard" />
-        <Stack.Screen component={StickyHeader} name="StickyHeader" />
-        <Stack.Screen component={CollapsibleHeader} name="CollapsibleHeader" />
-        <Stack.Screen component={SkeletonLoading} name="SkeletonLoading" />
+        <Stack.Screen component={Auth} name="Auth" />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -13,6 +13,10 @@ const Dashboard = ({navigation}) => {
         onPress={() => navigation.navigate('CollapsibleHeader')}
         title="animated header"
       />
+      <Button
+        onPress={() => navigation.navigate('SkeletonLoading')}
+        title="skeleton loading"
+      />
     </View>
   );
 };
