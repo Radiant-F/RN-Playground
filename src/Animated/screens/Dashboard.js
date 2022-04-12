@@ -17,6 +17,18 @@ const Dashboard = ({navigation}) => {
         onPress={() => navigation.navigate('SkeletonLoading')}
         title="skeleton loading"
       />
+      <Button
+        onPress={() => navigation.navigate('Buttons')}
+        title="tons buttons"
+      />
+      <Button
+        onPress={() => navigation.navigate('ScrollAnimation')}
+        title="scroll animation"
+      />
+      <Button
+        onPress={() => navigation.navigate('FormInput')}
+        title="form input"
+      />
     </View>
   );
 };

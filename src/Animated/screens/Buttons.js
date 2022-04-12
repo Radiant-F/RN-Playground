@@ -1,12 +1,12 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import CollapsibleHeader1 from '../components/screen/CollapsibleHeader1';
+import BouncyButton from '../components/screen/BouncyButton';
 
-export default function CollapsibleHeader() {
+export default function Buttons() {
   return (
     <View style={{flex: 1, alignItems: 'center'}}>
-      <CollapsibleHeader1 />
-      <Text>CollapsibleHeader</Text>
+      <Text>Button</Text>
+      <BouncyButton />
     </View>
   );
 }
