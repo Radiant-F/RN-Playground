@@ -1,4 +1,4 @@
-import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
 
 export const authSlice = createSlice({
   name: 'auth',
@@ -10,9 +10,12 @@ export const authSlice = createSlice({
     authType: (state, action) => {
       state.auth_type = action.payload;
     },
+    userData: (state, action) => {
+      state.user_data = action.payload;
+    },
   },
 });
 
-export const {authType} = authSlice.actions;
+export const {authType, userData} = authSlice.actions;
 
 export default authSlice.reducer;

@@ -2,7 +2,7 @@ import {Button, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {Login, Register} from '../../components/exports';
-import {authType} from '../../redux/auth';
+import {authType} from '../../redux/reducers/auth';
 
 export default function Auth() {
   const dispatch = useDispatch();

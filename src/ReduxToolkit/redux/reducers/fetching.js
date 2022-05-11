@@ -1,5 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit';
-import {getPokemon} from './actions/fetching';
+import {getPokemon} from '../actions/fetching';
 
 export const fetchingSlice = createSlice({
   name: 'fetching',
