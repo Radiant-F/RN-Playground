@@ -13,13 +13,27 @@
 // }
 
 // ==== REDUX THUNK ====
+// import React from 'react';
+// import Navigator from './Thunk/route/Navigator';
+// import {Provider} from 'react-redux';
+// import {createStore, applyMiddleware, compose} from 'redux';
+// import thunk from 'redux-thunk';
+// import reducers from './Thunk/redux/reducers';
+// const store = createStore(reducers, compose(applyMiddleware(thunk)));
+
+// export default function App() {
+//   return (
+//     <Provider store={store}>
+//       <Navigator />
+//     </Provider>
+//   );
+// }
+
+// ==== REDUX TOOLKIT ====
 import React from 'react';
-import Navigator from './Thunk/route/Navigator';
+import Navigator from './ReduxToolkit/routes/Navigator';
 import {Provider} from 'react-redux';
-import {createStore, applyMiddleware, compose} from 'redux';
-import thunk from 'redux-thunk';
-import reducers from './Thunk/redux/reducers';
-const store = createStore(reducers, compose(applyMiddleware(thunk)));
+import {store} from './ReduxToolkit/redux/store';
 
 export default function App() {
   return (
