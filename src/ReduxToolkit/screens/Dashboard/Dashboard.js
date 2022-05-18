@@ -7,9 +7,9 @@ export default function Dashboard() {
   const dispatch = useDispatch();
   const {todo, auth} = useSelector(state => state);
 
-  useEffect(() => {
-    dispatch(getTodo(auth.user_data.token));
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getTodo(auth.user_data.token));
+  // }, [dispatch]);
 
   return (
     <View>
