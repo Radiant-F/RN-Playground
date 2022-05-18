@@ -6,6 +6,7 @@ import {userData} from '../reducers/auth';
 export const login = createAsyncThunk(
   'auth/login',
   async ({formData, navigate}, {dispatch}) => {
+    console.log(formData);
     const {data} = await fetchLogin(formData);
     dispatch(userData(data));
     navigate('Dashboard');
