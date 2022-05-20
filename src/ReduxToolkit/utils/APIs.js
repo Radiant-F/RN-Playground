@@ -9,6 +9,8 @@ const urlConfig = token => ({
 
 export const fetchLogin = formData =>
   axios.post(`${url}/user/signin`, formData);
+export const fetchPosts = () => axios.get(`${url}/posts`);
+
 export const fetchUserDetail = token =>
   axios.get(`${url}/user`, urlConfig(token));
 export const fetchTodo = token => axios.get(`${url}/todo`, urlConfig(token));
