@@ -1,8 +1,8 @@
-// ==== REDUX ====
+// ========= Firebase =========
 // import React from 'react';
-// import Navigator from './Animated/route/Navigator';
-// import {store} from './Animated/redux/Store';
+// import Navigator from './Firebase/routes/Navigator';
 // import {Provider} from 'react-redux';
+// import {store} from './Firebase/redux/store';
 
 // export default function App() {
 //   return (
@@ -12,28 +12,11 @@
 //   );
 // }
 
-// ==== REDUX THUNK ====
-// import React from 'react';
-// import Navigator from './Thunk/route/Navigator';
-// import {Provider} from 'react-redux';
-// import {createStore, applyMiddleware, compose} from 'redux';
-// import thunk from 'redux-thunk';
-// import reducers from './Thunk/redux/reducers';
-// const store = createStore(reducers, compose(applyMiddleware(thunk)));
-
-// export default function App() {
-//   return (
-//     <Provider store={store}>
-//       <Navigator />
-//     </Provider>
-//   );
-// }
-
-// ==== REDUX TOOLKIT ====
+// ========= Excercise =========
 import React from 'react';
-import Navigator from './ReduxToolkit/routes/Navigator';
+import Navigator from './Excercise/routes/Navigator';
+import {store} from './Excercise/redux/store';
 import {Provider} from 'react-redux';
-import {store} from './ReduxToolkit/redux/store';
 
 export default function App() {
   return (
@@ -43,15 +26,12 @@ export default function App() {
   );
 }
 
-// ==== i18next ====
+// ========= Firebase =========
 // import React from 'react';
-// import Navigator from './i18n/route/Navigator';
+// import Navigator from './Libraries/routes/Navigator';
 // import {Provider} from 'react-redux';
-// import {createStore, applyMiddleware, compose} from 'redux';
-// import thunk from 'redux-thunk';
-// import reducers from './i18n/redux/reducers';
-// const store = createStore(reducers, compose(applyMiddleware(thunk)));
-// import './i18n/utils/constants/IMLocalize';
+// import {store} from './Libraries/redux/store';
+
 // export default function App() {
 //   return (
 //     <Provider store={store}>
