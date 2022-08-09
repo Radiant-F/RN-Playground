@@ -1,3 +1,27 @@
+// ========= Template =========
+import React from 'react';
+import {
+  Navigator,
+  BottomNavigator,
+  DrawerNavigator,
+} from './@Template/routes/Navigator';
+import {Provider} from 'react-redux';
+import {store} from './@Template/redux/store';
+import {NavigationContainer} from '@react-navigation/native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+
+export default function App() {
+  return (
+    <Provider store={store}>
+      <SafeAreaProvider>
+        <NavigationContainer>
+          <DrawerNavigator />
+        </NavigationContainer>
+      </SafeAreaProvider>
+    </Provider>
+  );
+}
+
 // ========= Firebase =========
 // import React from 'react';
 // import Navigator from './Firebase/routes/Navigator';
@@ -41,15 +65,15 @@
 // }
 
 // ========= RTK Query =========
-import React from 'react';
-import Navigator from './RTKQueryRedux/routes/Navigator';
-import {Provider} from 'react-redux';
-import {store} from './RTKQueryRedux/redux/store';
+// import React from 'react';
+// import Navigator from './RTKQuery/routes/Navigator';
+// import {Provider} from 'react-redux';
+// import {store} from './RTKQuery/redux/store';
 
-export default function App() {
-  return (
-    <Provider store={store}>
-      <Navigator />
-    </Provider>
-  );
-}
+// export default function App() {
+//   return (
+//     <Provider store={store}>
+//       <Navigator />
+//     </Provider>
+//   );
+// }
