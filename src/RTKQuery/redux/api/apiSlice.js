@@ -1,4 +1,5 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
+const headers = token => ({Authorization: `Bearer ${token}`});
 
 export const apiSlice = createApi({
   reducerPath: 'api',
@@ -14,9 +15,7 @@ export const apiSlice = createApi({
         url: '/posts',
         method: 'POST',
         body,
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+        headers: headers(token),
       }),
       invalidatesTags: ['Posts'],
     }),
