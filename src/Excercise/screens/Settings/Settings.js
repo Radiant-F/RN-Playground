@@ -1,10 +1,10 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-export default function Cart() {
+export default function Settings() {
   return (
     <View>
-      <Text>Cart</Text>
+      <Text>Settings</Text>
     </View>
   );
 }

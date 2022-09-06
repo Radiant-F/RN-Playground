@@ -1,6 +1,7 @@
-import Splash from './Splash/Splash';
-import Dashboard from './BottomTab/Dashboard/Dashboard';
-import Cart from './BottomTab/Cart/Cart';
-import Order from './BottomTab/Order/Order';
-import Profile from './BottomTab/Profile/Profile';
-export {Splash, Dashboard, Cart, Order, Profile};
+import Authentication from './Authentication/Authentication';
+import Dashboard from './Dashboard/Dashboard';
+import DrawerContent from './DrawerContent/DrawerContent';
+import Settings from './Settings/Settings';
+import SplashScreen from './Splash/SplashScreen';
+
+export {SplashScreen, Authentication, Dashboard, Settings, DrawerContent};
