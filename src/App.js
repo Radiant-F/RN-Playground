@@ -57,35 +57,35 @@
 // }
 
 // ========= Firebase =========
-// import React from 'react';
-// import Navigator from './Libraries/routes/Navigator';
-// import {Provider} from 'react-redux';
-// import {store} from './Libraries/redux/store';
-
-// export default function App() {
-//   return (
-//     <Provider store={store}>
-//       <Navigator />
-//     </Provider>
-//   );
-// }
-
-// ========= Libraries =========
 import React from 'react';
 import Navigator from './Libraries/routes/Navigator';
 import {Provider} from 'react-redux';
 import {store} from './Libraries/redux/store';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 export default function App() {
   return (
     <Provider store={store}>
-      <SafeAreaProvider>
-        <Navigator />
-      </SafeAreaProvider>
+      <Navigator />
     </Provider>
   );
 }
+
+// ========= Libraries =========
+// import React from 'react';
+// import Navigator from './Libraries/routes/Navigator';
+// import {Provider} from 'react-redux';
+// import {store} from './Libraries/redux/store';
+// import {SafeAreaProvider} from 'react-native-safe-area-context';
+
+// export default function App() {
+//   return (
+//     <Provider store={store}>
+//       <SafeAreaProvider>
+//         <Navigator />
+//       </SafeAreaProvider>
+//     </Provider>
+//   );
+// }
 
 // ========= RTK Query =========
 // import React from 'react';
