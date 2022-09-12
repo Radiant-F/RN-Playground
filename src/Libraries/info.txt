@@ -1,0 +1,8 @@
+this Libraries folder is purposed for testing npm library only.
+
+Libraries tested:
+react-native-ping
+react-native-bootsplash
+react-native-firebase-app
+react-native-firebase-auth
+react-native-firebase-firestore
