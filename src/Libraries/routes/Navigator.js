@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Auth, Dashboard, DrawerContent} from '../screens';
@@ -7,11 +7,17 @@ import {
   DrawerItemList,
   DrawerContentScrollView,
 } from '@react-navigation/drawer';
+import RNBootSplash from 'react-native-bootsplash';
+import {StatusBar} from 'react-native';
 
 const Stack = createNativeStackNavigator();
 export default function Navigator() {
+  const [barStyle, setBarStyle] = useState('dark-content');
   return (
-    <NavigationContainer>
+    <NavigationContainer
+      onReady={() => {
+        RNBootSplash.hide({fade: true});
+      }}>
       <Stack.Navigator initialRouteName="MainApp">
         <Stack.Screen
           component={DrawerNavigator}
