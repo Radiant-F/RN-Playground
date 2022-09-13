@@ -57,18 +57,18 @@
 // }
 
 // ========= Firebase =========
-import React from 'react';
-import Navigator from './Libraries/routes/Navigator';
-import {Provider} from 'react-redux';
-import {store} from './Libraries/redux/store';
+// import React from 'react';
+// import Navigator from './Libraries/routes/Navigator';
+// import {Provider} from 'react-redux';
+// import {store} from './Libraries/redux/store';
 
-export default function App() {
-  return (
-    <Provider store={store}>
-      <Navigator />
-    </Provider>
-  );
-}
+// export default function App() {
+//   return (
+//     <Provider store={store}>
+//       <Navigator />
+//     </Provider>
+//   );
+// }
 
 // ========= Libraries =========
 // import React from 'react';
@@ -127,21 +127,21 @@ export default function App() {
 //   );
 // }
 
-// export default function App() {
-//   useEffect(() => {
-//     const init = async () => {
-//       console.log('the app is running 😲');
-//       // …do multiple sync or async tasks
-//     };
+export default function App() {
+  useEffect(() => {
+    const init = async () => {
+      console.log('the app is running 😲');
+      // …do multiple sync or async tasks
+    };
 
-//     init().finally(async () => {
-//       await RNBootSplash.hide({fade: true});
-//       console.log('Bootsplash has been hidden successfully');
-//     });
-//   }, []);
-//   return (
-//     <View>
-//       <Text>ping?</Text>
-//     </View>
-//   );
-// }
+    init().finally(async () => {
+      await RNBootSplash.hide({fade: true});
+      console.log('Bootsplash has been hidden successfully');
+    });
+  }, []);
+  return (
+    <View>
+      <Text>ping?</Text>
+    </View>
+  );
+}
