@@ -127,21 +127,34 @@
 //   );
 // }
 
+// export default function App() {
+//   useEffect(() => {
+//     const init = async () => {
+//       console.log('the app is running 😲');
+//       // …do multiple sync or async tasks
+//     };
+
+//     init().finally(async () => {
+//       await RNBootSplash.hide({fade: true});
+//       console.log('Bootsplash has been hidden successfully');
+//     });
+//   }, []);
+//   return (
+//     <View>
+//       <Text>ping?</Text>
+//     </View>
+//   );
+// }
+
+// ========= User Interface Sketchs =========
+import {SignIn00} from './UI-UX/screens';
+import React, {useEffect} from 'react';
+import RNBootSplash from 'react-native-bootsplash';
+
 export default function App() {
   useEffect(() => {
-    const init = async () => {
-      console.log('the app is running 😲');
-      // …do multiple sync or async tasks
-    };
-
-    init().finally(async () => {
-      await RNBootSplash.hide({fade: true});
-      console.log('Bootsplash has been hidden successfully');
-    });
+    RNBootSplash.hide({fade: true});
   }, []);
-  return (
-    <View>
-      <Text>ping?</Text>
-    </View>
-  );
+
+  return <SignIn00 />;
 }
